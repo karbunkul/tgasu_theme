@@ -1,0 +1,36 @@
+$a_color:#740000;
+$header_color:#760000;
+$header_height:280px;
+$navbar_height:40px;
+
+$footer_color:black;
+
+BODY{
+	//background-color:$footer_color;	
+}
+
+.header-wrapper{
+	background-color:$header_color;
+	//height:$header_height;
+}
+
+.header-margin{
+	margin-top:$navbar_height;
+}
+
+.navbar{
+	height:$navbar_height;
+}
+
+a{
+	color:$a_color;
+}
+
+.footer-wrapper{
+	//background-color:$footer_color;
+	height:100%;
+}
+
+.content-wrapper{
+	//background-color:white;
+}

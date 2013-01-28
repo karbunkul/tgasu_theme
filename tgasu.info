@@ -1,0 +1,56 @@
+name = Tgasu
+description = A custom theme for tgasu.ru
+core = 7.x
+
+; CSS
+stylesheets[all][] = assets/css/bootstrap.css
+stylesheets[all][] = assets/css/bootstrap-responsive.css
+stylesheets[all][] = assets/css/tgasu.css
+stylesheets[all][] = assets/css/typography.css
+
+; JS
+scripts[] = assets/js/bootstrap-affix.js
+scripts[] = assets/js/bootstrap-alert.js
+scripts[] = assets/js/bootstrap-button.js
+scripts[] = assets/js/bootstrap-carousel.js
+scripts[] = assets/js/bootstrap-collapse.js
+scripts[] = assets/js/bootstrap-dropdown.js
+scripts[] = assets/js/bootstrap-modal.js
+scripts[] = assets/js/bootstrap-popover.js
+scripts[] = assets/js/bootstrap-scrollspy.js
+scripts[] = assets/js/bootstrap-tab.js
+scripts[] = assets/js/bootstrap-tooltip.js
+scripts[] = assets/js/bootstrap-transition.js
+scripts[] = assets/js/bootstrap-typeahead.js
+<<<<<<< .mine
+=======
+scripts[] = assets/js/bootstrap-affix.js
+    
+
+>>>>>>> .r16
+
+; REGIONS
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[triptych_first] = Triptych first
+regions[triptych_middle] = Triptych middle
+regions[triptych_last] = Triptych last
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
+
+regions[search] = Search
+
+regions[auth] = Auth

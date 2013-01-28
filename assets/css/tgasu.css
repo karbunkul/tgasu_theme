@@ -1,0 +1,24 @@
+/* line 12, ../sass/tgasu.scss */
+.header-wrapper {
+  background-color: #760000;
+}
+
+/* line 17, ../sass/tgasu.scss */
+.header-margin {
+  margin-top: 40px;
+}
+
+/* line 21, ../sass/tgasu.scss */
+.navbar {
+  height: 40px;
+}
+
+/* line 25, ../sass/tgasu.scss */
+a {
+  color: #740000;
+}
+
+/* line 29, ../sass/tgasu.scss */
+.footer-wrapper {
+  height: 100%;
+}

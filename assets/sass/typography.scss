@@ -1,0 +1,8 @@
+.content P { 
+  text-indent: 15px;
+  text-align: justify;
+  margin-bottom:12px;
+}
+P:first-child{
+  text-indent:0;
+}
