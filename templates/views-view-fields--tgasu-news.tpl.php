@@ -37,7 +37,7 @@
  
  <div class="well">
 	<div class="row-fluid">
-		<div class="news-main-preview span2 clearfix"><?php print $fields['field_new_preview']->content;?></div>
+		<div class="news-main-preview span2 clearfix"><?php print $fields['field_tgasu_news_preview']->content;?></div>
 		<div class="span10">
 			<div class="conteiner-fluid">
 				<h4><small><i class="icon icon-time"></i><?php print $fields['created']->content;?></small>

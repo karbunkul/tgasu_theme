@@ -3,6 +3,7 @@ $header_color:#760000;
 $header_height:280px;
 $navbar_height:40px;
 
+$footer_height:180px;
 $footer_color:black;
 
 BODY{
@@ -26,11 +27,30 @@ a{
 	color:$a_color;
 }
 
-.footer-wrapper{
-	//background-color:$footer_color;
-	height:100%;
-}
 
-.content-wrapper{
-	//background-color:white;
-}
+
+* {
+    margin: 0;
+    }
+    html, body {
+    height: 100%;
+    }
+    .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 0px - $footer_height - 10px;
+    }
+    
+    .footer{
+     background-color: #1B1B1B;
+     color: white;
+    }
+    
+    .footer, .push {
+    height: $footer_height;
+    
+    clear: both;
+    }
+    

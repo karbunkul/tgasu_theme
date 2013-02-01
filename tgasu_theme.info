@@ -1,6 +1,7 @@
 name = Tgasu
 description = A custom theme for tgasu.ru
 core = 7.x
+dependencies[] = tgasu_extra 
 
 ; CSS
 stylesheets[all][] = assets/css/bootstrap.css

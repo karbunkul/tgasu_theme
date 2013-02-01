@@ -11,12 +11,12 @@ if ($theme_debug && !defined('MAINTENANCE_MODE')) {
  drupal_theme_rebuild();
 }
 
-function tgasu_js_alter(&$javascript){
- $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'tgasu') . '/assets/js/jquery/jquery-last.js';
+function tgasu_theme_js_alter(&$javascript){
+ //$javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'tgasu_theme') . '/assets/js/jquery/jquery-last.js';
 }
 
 /*bootstrap breadcrumbs*/
-function tgasu_breadcrumb(&$variables) {
+function tgasu_theme_breadcrumb(&$variables) {
  $breadcrumb = $variables['breadcrumb'];
  if (!empty($breadcrumb)) {
   $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
@@ -33,7 +33,7 @@ function tgasu_breadcrumb(&$variables) {
 }
 
 /*bootstrap tabs*/
-function tgasu_menu_local_tasks(&$variables) {
+function tgasu_theme_menu_local_tasks(&$variables) {
  $output = '';
  if (!empty($variables['primary'])) {
   $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
@@ -50,7 +50,7 @@ function tgasu_menu_local_tasks(&$variables) {
  return $output;
 }
 
-function tgasu_table($variables) {
+function tgasu_theme_table($variables) {
  $header = $variables['header'];
  $rows = $variables['rows'];
  $attributes = $variables['attributes'];
@@ -195,7 +195,7 @@ function tgasu_table($variables) {
 }
 
 
-function tgasu_button($variables) {
+function tgasu_theme_button($variables) {
 	$element = $variables['element'];
 	$element['#attributes']['type'] = 'submit';
 	element_set_attributes($element, array('id', 'name', 'value'));

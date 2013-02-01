@@ -1,19 +1,17 @@
-<?php //если не админ то показываем тулбар?>
+<style>
+  
+    
 
-<?php if (!$is_admin):?>
-<!--NAVBAR-->
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar navbar-inner"><a class="brand" href="<?print $front_page; ?>"><?php print strtolower($_SERVER['SERVER_NAME']); ?></a>
-  	<ul class="nav pull-right">
-  		<li><?php if ($logged_in):?> <a href="/user/logout"><?php print '<i class="icon-off icon-white"></i> ' . t("Logout"); endif;?></a></li>
-  	</ul>	    
-  </div>
-</div>
-<!--#NAVBAR-->
-<?php endif;?>
+  
+</style>
+
+
+
+<div class="wrapper">
+
 
 <!--HEADER-->
-<div class="container-fluid header-wrapper <?php if (!$is_admin):?>header-margin<?php endif;?>">
+<div class="container-fluid header-wrapper <?php if (!$is_admin):?><!--header-margin--><?php endif;?>">
   <div class="row-fluid">
     <span class="span2">
       <?php if ($logo): ?>
@@ -23,37 +21,9 @@
     <span class="span8">
     
     
-        <div id="myCarousel" class="carousel slide">
-        <?php $banner_dir = 'http://localhost/devel/' . drupal_get_path('theme', 'tgasu') . '/banner'; ?>
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-    	<div class="active item">
-    		<img alt="" src="<?php print $banner_dir; ?>/1.jpg">
-        <div class="carousel-caption">
-        	<h4>Первый слайд</h4>
-          	<p>Ну а тут можно выводить любой текст, в том числе и такие ссылки <a href="/node/1"><button class="btn btn-danger">подробнее</button></a></p></div>
-    		</div>
-    	<div class="item">
-    		<img alt="" src="<?php print $banner_dir; ?>/3.png">
-        <div class="carousel-caption">
-        	<h4>Второй слайд</h4>
-          	<p>Текст для второго слайда</p>
-        </div>
-    	</div>
-    	<div class="item">
-    		<img alt="" src="<?php print $banner_dir; ?>/2.jpg">
-        <div class="carousel-caption">
-        	<h4>Third Thumbnail label</h4>
-          	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-        </div>
-    	</div>
-    </div>
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>
+       
     
-    <?php //print render($page['header']); ?></span>
+    <?php print render($page['header']); ?></span>
     <span class="span2">
     <?php if (!$logged_in):?>
     <p>Добро пожаловать Гость</p>
@@ -202,36 +172,19 @@
     	</div>
 	</div>
 </div>
+
 <?php endif;?>
 
 <!--#CONTENT-->
 
 
+<div class="push">&nbsp;</div>
+</div>
+
 <!-- FOOTER -->
 
-<footer>
-<div class="tabbable tabs-below">
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-      <div class="row-fluid">
-       <div class="span3">1 колонка</div><span style="background-color:grey;">
-тут какой-то текст тут какой-то текст тут какой-то текст тут какой-то текст тут какой-то текст тут какой-то текст</span>
-       <div class="span3">2 колонка</div>
-       <div class="span3">3 колонка</div>
-       <div class="span3">4 колонка</div>
-      </div>
-    </div>
-    <div class="tab-pane" id="tab2">
-      <p>Здесь так же могут быть колонки</p>
-      
-    </div>
-    <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Кафедры</a></li>
-    <li><a href="#tab2" data-toggle="tab">Институты</a></li>
-  </ul>
+<div class="footer">
+  <?php print render($page['footer']); ?>
 </div>
-</div>
-</footer>
 <!-- #FOOTER -->
 
