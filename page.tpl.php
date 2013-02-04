@@ -1,14 +1,4 @@
-<style>
-  
-    
-
-  
-</style>
-
-
-
 <div class="wrapper">
-
 
 <!--HEADER-->
 <div class="container-fluid header-wrapper <?php if (!$is_admin):?><!--header-margin--><?php endif;?>">
@@ -21,7 +11,6 @@
     <span class="span8">
     
     
-       
     
     <?php print render($page['header']); ?></span>
     <span class="span2">
@@ -31,7 +20,6 @@
 
 
 <div id="userModal" class="modal hide fade">
-    
         <div class="modal-header">
             <a class="close" data-dismiss="modal">×</a>
             <h3>A Modal Form</h3>
@@ -41,13 +29,10 @@
         </div>
 </div>
  <?php endif;?>   
-    
-    
     </span>
   </div>
 </div>
 <!--./HEADER-->
-
 
 <!-- BREADCRUMB -->
 <div class="conteiner-fluid">
@@ -62,59 +47,22 @@
 <?php
 	$sidebar_one = render($page['sidebar_first']);
 	$sidebar_two = render($page['sidebar_second']);
-	$content = render($page['content']);
+	$content = drupal_get_path('theme', 'tgasu_theme') . '/assets/content.php';
 ?>
 
 <?php if ( ($sidebar_one != '') && ($sidebar_two == '') ):?>
 <div class="container-fluid content-wrapper">
-	<div class="row-fluid">
-    	<div class="span2"><?php print $sidebar_one; ?></div>
-    	<div class="span10">
-    		<div id="content" class="column" role="main">
-        		<?php print render($page['highlighted']); ?>
-        			<a id="main-content"></a>
-        		<?php print render($title_prefix); ?>
-      			<?php if ($title): ?>
-        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
-      			<?php endif; ?>
-      			<?php print render($title_suffix); ?>
-      			<?php print $messages; ?>
-      			<?php print render($tabs); ?>
-      			<?php print render($page['help']); ?>
-      			<?php if ($action_links): ?>
-        			<ul class="action-links"><?php print render($action_links); ?></ul>
-      			<?php endif; ?>
-      			<?php print render($page['content']); ?>
-      			<?php print $feed_icons; ?>
-    		</div>
-    	</div>
-    	</div>
-    </div>
+  <div class="row-fluid">
+	<div class="span2"><?php print $sidebar_one; ?></div>
+	<div class="span10"><?php require_once $content; ?></div>
+  </div>
 </div>
 <?php endif;?>
 
 <?php if ( ($sidebar_one == '') && ($sidebar_two != '') ):?>
 <div class="container-fluid content-wrapper">
 	<div class="row-fluid">
-    	<div class="span10">
-    		<div id="content" class="column" role="main">
-        		<?php print render($page['highlighted']); ?>
-        			<a id="main-content"></a>
-        		<?php print render($title_prefix); ?>
-      			<?php if ($title): ?>
-        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
-      			<?php endif; ?>
-      			<?php print render($title_suffix); ?>
-      			<?php print $messages; ?>
-      			<?php print render($tabs); ?>
-      			<?php print render($page['help']); ?>
-      			<?php if ($action_links): ?>
-        			<ul class="action-links"><?php print render($action_links); ?></ul>
-      			<?php endif; ?>
-      			<?php print render($page['content']); ?>
-      			<?php print $feed_icons; ?>
-    		</div>
-    	</div>
+    	<div class="span10"><?php require_once $content; ?></div>
     	<div class="span2"><?php print $sidebar_two; ?></div>
     </div>
 </div>
@@ -124,25 +72,7 @@
 <div class="container-fluid content-wrapper">
 	<div class="row-fluid">
 		<div class="span2"><?php print $sidebar_one; ?></div>
-    	<div class="span8">
-    		<div id="content" class="column" role="main">
-        		<?php print render($page['highlighted']); ?>
-        			<a id="main-content"></a>
-        		<?php print render($title_prefix); ?>
-      			<?php if ($title): ?>
-        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
-      			<?php endif; ?>
-      			<?php print render($title_suffix); ?>
-      			<?php print $messages; ?>
-      			<?php print render($tabs); ?>
-      			<?php print render($page['help']); ?>
-      			<?php if ($action_links): ?>
-        			<ul class="action-links"><?php print render($action_links); ?></ul>
-      			<?php endif; ?>
-      			<?php print render($page['content']); ?>
-      			<?php print $feed_icons; ?>
-    		</div>
-    	</div>
+    	<div class="span8"><?php require_once $content; ?></div>
     	<div class="span2"><?php print $sidebar_two; ?></div>
     </div>
 </div>
@@ -151,30 +81,11 @@
 <?php if ( ($sidebar_one == '') && ($sidebar_two == '') ):?>
 <div class="container-fluid content-wrapper">
 	<div class="row-fluid">
-    	<div class="span12">
-    		<div id="content" class="column" role="main">
-        		<?php print render($page['highlighted']); ?>
-        			<a id="main-content"></a>
-        		<?php print render($title_prefix); ?>
-      			<?php if ($title): ?>
-        			<h1 class="title" id="page-title"><?php print $title; ?></h1>
-      			<?php endif; ?>
-      			<?php print render($title_suffix); ?>
-      			<?php print $messages; ?>
-      			<?php print render($tabs); ?>
-      			<?php print render($page['help']); ?>
-      			<?php if ($action_links): ?>
-        			<ul class="action-links"><?php print render($action_links); ?></ul>
-      			<?php endif; ?>
-      			<?php print render($page['content']); ?>
-      			<?php print $feed_icons; ?>
-    		</div>
-    	</div>
+    	<div class="span12"><?php require_once $content; ?></div>
 	</div>
 </div>
 
 <?php endif;?>
-
 <!--#CONTENT-->
 
 
@@ -187,4 +98,5 @@
   <?php print render($page['footer']); ?>
 </div>
 <!-- #FOOTER -->
+
 
