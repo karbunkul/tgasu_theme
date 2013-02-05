@@ -1,34 +1,30 @@
 name = Tgasu
 description = A custom theme for tgasu.ru
 core = 7.x
-dependencies[] = tgasu_extra 
+;dependencies[] = tgasu_extra 
 
 ; CSS
-stylesheets[all][] = assets/css/bootstrap.css
-stylesheets[all][] = assets/css/bootstrap-responsive.css
+
+;stylesheets[all][] = assets/css/bootstrap.css
+;stylesheets[all][] = assets/css/bootstrap-responsive.css
 stylesheets[all][] = assets/css/tgasu.css
-stylesheets[all][] = assets/css/typography.css
+;stylesheets[all][] = assets/css/typography.css
 
 ; JS
-scripts[] = assets/js/bootstrap-affix.js
-scripts[] = assets/js/bootstrap-alert.js
-scripts[] = assets/js/bootstrap-button.js
-scripts[] = assets/js/bootstrap-carousel.js
-scripts[] = assets/js/bootstrap-collapse.js
-scripts[] = assets/js/bootstrap-dropdown.js
-scripts[] = assets/js/bootstrap-modal.js
-scripts[] = assets/js/bootstrap-popover.js
-scripts[] = assets/js/bootstrap-scrollspy.js
-scripts[] = assets/js/bootstrap-tab.js
-scripts[] = assets/js/bootstrap-tooltip.js
-scripts[] = assets/js/bootstrap-transition.js
-scripts[] = assets/js/bootstrap-typeahead.js
-<<<<<<< .mine
-=======
-scripts[] = assets/js/bootstrap-affix.js
-    
 
->>>>>>> .r16
+;scripts[] = assets/js/bootstrap-affix.js
+;scripts[] = assets/js/bootstrap-alert.js
+;scripts[] = assets/js/bootstrap-button.js
+;scripts[] = assets/js/bootstrap-carousel.js
+;scripts[] = assets/js/bootstrap-collapse.js
+;scripts[] = assets/js/bootstrap-dropdown.js
+;scripts[] = assets/js/bootstrap-modal.js
+;scripts[] = assets/js/bootstrap-popover.js
+;scripts[] = assets/js/bootstrap-scrollspy.js
+;scripts[] = assets/js/bootstrap-tab.js
+;scripts[] = assets/js/bootstrap-tooltip.js
+;scripts[] = assets/js/bootstrap-transition.js
+;scripts[] = assets/js/bootstrap-typeahead.js
 
 ; REGIONS
 regions[header] = Header

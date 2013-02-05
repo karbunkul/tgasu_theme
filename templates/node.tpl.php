@@ -80,13 +80,6 @@
 */
 ?>
 
-<article>
-	<blockquote>
-  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  </blockquote>
-</article>
-
-
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php print $user_picture; ?>
 <?php print render($title_prefix); ?>

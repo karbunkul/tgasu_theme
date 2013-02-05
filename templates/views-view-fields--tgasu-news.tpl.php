@@ -23,40 +23,30 @@
  *
  * @ingroup views_templates
  */
-
-//kpr($row);
 ?>
 
-<style>
-
-.news-main-preview{
-	max-width:128px;
-}
-
-</style>
- 
- <div class="well">
-	<div class="row-fluid">
-		<div class="news-main-preview span2 clearfix"><?php print $fields['field_tgasu_news_preview']->content;?></div>
-		<div class="span10">
-			<div class="conteiner-fluid">
-				<h4><small><i class="icon icon-time"></i><?php print $fields['created']->content;?></small>
-					<?php print $fields['title']->content;?>
-				</h4>
-				
-				<p><?php print $fields['body']->content;?>	
-				<?php if (user_access('edit any new content')): ?>
-					<a href="node/<?php print $row->nid; ?>/edit">
-						<button class="btn btn-success"><?php print t('Edit')?></button>
-					</a>
-				
-				<?php endif; ?>
-					<a href="node/<?php print $row->nid; ?>">
-					 <button class="btn btn-info pull-right"><?php print t('Read more')?>
-					 </button>
-				</a>
-			</div>
+<div class="well news-post">
+	
+	<div class="news-preview">
+		<?php print $fields['field_tgasu_news_preview']->content;?>
+	</div>
+	
+	<div class="news-title">
+		<?php print $fields['title']->content;?>
+	</div>
+	
+		
+	
+	
+	<div class="row-fixed">	
+		<span class="span8">
+			<i class="icon icon-time"></i><?php print $fields['created']->content;?>
+		</span>
+		
+		<span class="span4">
+			<a class="pull-right" href="node/<?php print $row->nid; ?>"><?php print t('Read more'); ?></a>
+		</span>
+	</div>
 			
-		</div>
-	</div>	
+		
 </div>
